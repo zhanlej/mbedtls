@@ -950,6 +950,10 @@ int mbedtls_mpi_gen_prime( mbedtls_mpi *X, size_t nbits, int flags,
  */
 int mbedtls_mpi_self_test( int verbose );
 
+void mpi_montg_init( mbedtls_mpi_uint *mm, const mbedtls_mpi *N );
+int mpi_montred( mbedtls_mpi *A, const mbedtls_mpi *N,
+                        mbedtls_mpi_uint mm, const mbedtls_mpi *T );
+
 #ifdef __cplusplus
 }
 #endif
